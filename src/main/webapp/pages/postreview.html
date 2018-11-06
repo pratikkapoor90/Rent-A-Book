@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Rent-A-Book</title>
+<!-- Followed  a grid based layout for displaying books and cover pages with a view book button.This button
+helps to view more details related to the book details
+ https://www.w3schools.com/bootstrap/bootstrap_grid_system.asp 
+ Used Angular Directives to perform validations on the form fields
+ https://angular.io/docs
+ -->
+ <link rel="stylesheet" href="css/homepage.css">
+</head>
+<body> 
+<div  style="background: url(pexels-photo-207742.jpeg)"> 
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar">
+        <a class="navbar-brand" href="#home">Rent A Book</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"  aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="container">
+				<a class="nav-link" href="#userprofile">MyProfile</a>
+
+            <div>
+                <button class="btn btn-outline-warning my-2 my-sm-0" onclick="location.href = '#login';" type="submit">Logout</button>
+
+           
+            </div>
+
+        </div>
+    </nav>
+</div>
+    <div class="container">
+        <!--site_login-->
+        <div class="bg-img" >
+            <!-- Main Form -->
+            <div class="login-form-1">
+                <form name="loginForm"  >
+                    <div class="customcontainer-register">
+                        <h1>Feedback</h1><br>
+                        <div class="login-form-main-message"></div>
+                        <div class="main-login-form">
+                            <div class="login-group">
+                                <!-- <div class="form-group">
+                                    <input type="text" ng-model="cvv" required class="form-control" name="cvv" value="{{touser}}">
+                                </div> -->
+                                
+                                <div class="form-group">
+                                    <input
+                                        required
+                                        autofocus 
+                                        data-ng-model="form_feedback"
+                                        type="text" class="form-control" id="reg_feedback"
+                                        name="reg_feedback" placeholder="Enter Feedback Comments"
+                                        pattern="^[A-z0-9 ]*$"
+                                        title="Only letters, numbers and space allowed">
+                                </div>
+                            </div>
+                            <button  data-ng-click="sendFeedbackRequest()" class="btn btn-outline-warning my-2 my-sm-0" style="margin-left: auto;margin-right: auto;display: block">Submit</button>
+      						<p class="text-success" >{{response}}</p>
+                            <p class="text-danger">{{errormessage}}</p>
+  
+
+                        </div>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+    <div data-ng-include="'pages/footer.html'"></div>
+</div>
+</body>
+</html>

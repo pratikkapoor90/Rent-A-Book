@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Rent-A-Book</title>
+<!-- Followed  a grid based layout for displaying books and cover pages with a view book button.This button
+helps to view more details related to the book details
+ https://www.w3schools.com/bootstrap/bootstrap_grid_system.asp 
+ Used Angular Directives to perform validations on the form fields
+ https://angular.io/docs
+ -->
+  <link rel="stylesheet" href="css/homepage.css">
+</head>
+<body>
+
+<div  style="background: url(pexels-photo-207742.jpeg)"> 
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar">
+        <a class="navbar-brand" href="#home">Rent A Book</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"  aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="container">
+                        <a class="nav-link" href="#userprofile">MyProfile</a>
+
+           
+            <div>
+                <button class="btn btn-outline-warning my-2 my-sm-0" onclick="location.href = '#login';" type="submit">Login</button>
+
+           
+            </div>
+
+        </div>
+    </nav>
+</div>
+
+    <div class="container">
+        <!--site_login-->
+        <div class="bg-img" >
+            <!-- Main Form -->
+            <div class="login-form-1">
+                <form name="loginForm"  >
+                    <div class="customcontainer-register">
+                        <h1>Register</h1><br>
+                        <div class="login-form-main-message"></div>
+                        <div class="main-login-form">
+                            <div class="login-group">
+                                <div class="form-group">
+                                    <input
+                                        required
+                                        autofocus 
+                                        data-ng-model="form_fullname"
+                                        type="text" class="form-control" id="reg_fullname"
+                                        name="reg_fullname" placeholder="Enter Full Name"
+                                        pattern="^[A-z ]*$"
+                                        title="Only letters and space allowed"
+                                        >
+                                </div>
+                                <div class="form-group">
+                                    
+                                    <input
+                                        required 
+                                        data-ng-model="form_username"
+                                        type="email" class="form-control" id="reg_username"
+                                        name="reg_username" placeholder="Enter Email">
+                                </div>
+                                <div class="form-group">
+                                    <input
+                                        required 
+                                        data-ng-model="form_password"
+                                        type="password" class="form-control" id="reg_password"
+                                        name="reg_password" placeholder="Enter Password">
+                                </div>
+                                <div class="form-group">
+                                    <input
+                                        required 
+                                        data-ng-model="form_password_confirm"
+                                        type="password" class="form-control"
+                                        id="reg_password_confirm" name="reg_password_confirm"
+                                        placeholder="Re-enter Password">
+                                </div>
+                                <div class="form-group">
+                                    
+                                    <input
+                                        data-ng-model="form_number"
+                                        type="text" required class="form-control" id="reg_number"
+                                        name="reg_number" placeholder="Enter Mobile Number"
+                                        pattern="^\d{10}$"
+                                        title="10-digit number">
+                                </div>
+                            </div>
+                            <button  data-ng-click="sendRegisterRequest()" class="btn btn-outline-warning my-2 my-sm-0" style="margin-left: auto;margin-right: auto;display: block">Register</button>
+      <p class="text-danger">{{errormessage}}</p>
+
+  
+
+                        </div>
+                    </div>
+                    
+                </form>
+            </div>
+            <!-- end:Main Form -->
+            <p >{{loginresponse}}</p>
+            <p class="text-danger">{{errormessage}}</p>
+        </div>
+    </div>
+    <div data-ng-include="'pages/footer.html'"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Rent-A-Book</title>
+<!-- Followed  a grid based layout for displaying books and cover pages with a view book button.This button
+helps to view more details related to the book details
+ https://www.w3schools.com/bootstrap/bootstrap_grid_system.asp 
+ Used Angular Directives to perform validations on the form fields
+ https://angular.io/docs
+ -->
+</head>
+<body>
+<div data-ng-include="'pages/navfile.html'"></div>
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Available Books</h2><br>
+        </div>
+    </div>
+    <div class="row ">
+        <div data-ng-repeat="book in allbooks"  class="col-sm-3 img-thumbnail">
+            <div  class="text-center" style="width:200px;height:200px">
+                <img  class="text-center img-fluid img-responsive " alt=""  data-ng-src="cover_pages/{{book.bookId}}.jpg" src="book.jpg"/>
+            </div>
+           <p>Title:{{book.title}}</p>
+           <p>Author:{{book.author}}</p>
+           <p>Publisher:{{book.publisher}}</p>
+           <p>Price:${{book.price}}</p>
+           <p>Quantity:${{book.quantity}}</p>
+          <p>Availability:${{book.availability}}</p>
+          <p>Quantity:${{book.quantity}}</p>
+          <p>Period:${{book.period}}</p>
+          <p>Category:${{book.category}}</p>
+          <p>Description:${{book.description}}</p>
+          <p>User:${{book.uname}}</p>
+         </div>
+        
+    </div>
+    <br>
+    
+
+</div>
+</body>
+</html>

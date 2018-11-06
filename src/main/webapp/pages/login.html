@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Rent-A-Book</title>
+<!-- Followed  a grid based layout for displaying books and cover pages with a view book button.This button
+helps to view more details related to the book details
+ https://www.w3schools.com/bootstrap/bootstrap_grid_system.asp 
+ Used Angular Directives to perform validations on the form fields
+ https://angular.io/docs
+ -->
+  <link rel="stylesheet" href="css/homepage.css">
+</head>
+<body> 
+<div  style="background: url(pexels-photo-207742.jpeg)"> 
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar">
+            <a class="navbar-brand" href="#home">Rent A Book</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="container">
+
+                        <a class="nav-link" href="#userprofile">MyProfile</a>
+                <div>
+                    <button class="btn btn-outline-warning my-2 my-sm-0" onclick="location.href = '#register';" type="submit">Register</button>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+    <!--site_login-->
+    <div class="bg-img">
+        <form name="loginForm"     >
+            <div class="customcontainer-login">
+                <h1>Login</h1><br>
+
+                <fieldset class="form-group">
+                    <input data-ng-model="form_user_name"
+                           type="email" class="form-control" id="InputName"
+                           placeholder="Enter Email">
+                </fieldset>
+                <fieldset class="form-group">
+                    <input
+                        data-ng-model="form_password" type="password" class="form-control"
+                        id="Inputpassword" placeholder="Enter Password">  
+                </fieldset>
+
+                <button data-ng-click="sendLoginRequest()"  class="btn btn-outline-warning my-2 my-sm-0" style="margin-left: auto;margin-right: auto;display: block">Submit</button>
+                <p class="text-danger">{{errormessage}}</p>
+
+            </div>
+        </form>
+
+    </div>
+
+
+    <div data-ng-include="'pages/footer.html'"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,118 @@
+/*Reference Link: https://www.w3schools.com/howto/howto_css_image_text_blocks.asp*/
+/*Reference Link: https://www.w3schools.com/howto/howto_css_form_on_image.asp*/
+
+
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+}
+
+body, html {
+    height: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.bg-img {
+    /* Control the height of the image */
+    min-height: 380px;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+/* Add styles to the form container */
+.customcontainer-register {
+    /* position: absolute; */
+    right: 0;
+    margin: 1em;
+    margin-top: 5em;
+    max-width: 25em;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding: 1.5em;
+    background-color: white;
+    border: .2em;
+    border-radius: 1em;
+}
+
+.customcontainer-login {
+    /* position: absolute; */
+    right: 0;
+    margin: 1em;
+    margin-top: 5em;
+    max-width: 20em;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding: 1.5em;
+    background-color: white;
+    border: .2em;
+    border-radius: 1em;
+}
+
+.customcontainer-upload {
+    /* position: absolute; */
+    right: 0;
+    margin-top: 3em;
+    max-width: 25em;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding: 1.5em;
+    background-color: #f8f8ff;
+    border: .2em;
+    border-radius: 1em;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: .8em;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #FAC04D;
+    outline: none;
+}
+
+#custommedia1, #custommedia2, #custommedia3, #custommedia4 {
+    border: 0.5em black;
+    margin-bottom: 2em;
+}
+
+#imageprvw1, #imageprvw2, #imageprvw3, #imageprvw4{
+    height: auto;
+    width: auto;
+    max-width: 8%;
+    max-height: 8%;
+}
+
+#author1, #author2, #author3, #author4{
+    margin-top: 1em;
+}
+
+.record{
+    font-size: 1.2em;
+    font-weight: bolder;
+    text-align: center;
+    color: black;
+}
+
+.bg-warning{
+    background-color: #ffd149!important;
+}

@@ -1,0 +1,46 @@
+.card{
+	width:85%;
+}
+
+.nav-link{
+	color: white !important;
+}
+
+/* .nav-link a:hover{
+	text-decoration: underline !important;
+	color: black !important;
+} */
+
+/* .form-control{
+	position: relative;
+	float: right;
+} */
+
+@media screen and (min-width:769px){
+	.column_custom{
+	width: 25%;
+	}
+	
+}
+
+@media screen and (max-width: 768px) and (min-width:321px){
+	.column_custom{
+	width: 50%;
+	}
+	
+	.btn btn-warning{
+	/* width: 70%; */
+	}
+	
+	.btn{
+	font-size: smaller !important; 
+	}
+	
+}
+
+@media screen and (max-width: 320px){
+	.column_custom{
+	width: 100%;
+	}
+	
+}

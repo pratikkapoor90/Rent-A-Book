@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Rent-A-Book</title>
+<!-- Followed  a grid based layout for displaying books and cover pages with a view book button.This button
+helps to view more details related to the book details
+ https://www.w3schools.com/bootstrap/bootstrap_grid_system.asp 
+ Used Angular Directives to perform validations on the form fields
+ https://angular.io/docs
+ -->
+ <link rel="stylesheet" href="css/payment.css">
+
+</head>
+<body> 
+<div  style="background-image: url('pexels-photo-207742.jpeg');">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar">
+            <a class="navbar-brand" href="#userhome">Rent A Book</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"  aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="container">       
+                        <a class="nav-link" href="#userprofile" style="color: white;">MyProfile</a>
+
+
+                <div>
+                    <button class="btn btn-outline-warning my-2 my-sm-0" onclick="location.href = '#logout';" type="submit">Logout</button>
+
+
+                </div>
+
+            </div>
+        </nav>
+    </div>
+    <!--site_login-->
+    <div  class="container" id="login">
+        <div class="row">
+            <h2 class="property_types">
+            </h2>
+            <br>
+        </div>
+            <!-- <div class=" col-sm-4 bg-img">
+                <div class="login-form-1"> -->
+                   <!--  <div class="bg-img"> -->
+                        <form name="myForm" id="register-form" class="text-left" >
+                           <div class="customcontainer-upload">
+                         <h2>Payment</h2>
+
+                            <h5>Accepted Cards</h5>
+
+                            <div class="icon-container">
+                                <i class="fa fa-cc-visa" style="color:navy;"></i>
+                                <i class="fa fa-cc-amex" style="color:blue;"></i>
+                                <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                                <i class="fa fa-cc-discover" style="color:orange;"></i>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="text" 
+                                       data-ng-model="name" required
+                                       class="form-control" name="name" placeholder="Name on Card"
+                                       pattern="^[A-z ]*$"
+                                       title="Only letters allowed">
+                            </div>
+
+                            <div class="form-group">
+                                <input type="text" required data-ng-model="card" class="form-control" name="card_number" placeholder="16-digit Card Number" pattern="^\d{16}$" title="Only 16 digits allowed">
+                            </div>
+
+                            <div class="form-group">
+                                <input type="date" data-ng-model="date" required class="form-control" name="exp_date">
+                            </div>
+
+                            <div class="form-group">
+                                <input type="text" data-ng-model="cvv" required class="form-control" name="cvv" placeholder="CVV" pattern="^\d{3}$" title="3 digit number">
+                            </div>
+
+
+                            <div class="form-group">
+                                <button  data-ng-click="sendPaymentRequest()" class="btn btn-primary btn-lg btn-block" >Checkout</button>
+                            </div>
+                            <!-- end:Main Form -->
+                            <p class="text-success" >{{response}}</p>
+                            <p class="text-danger">{{errormessage}}</p>
+                           </div>
+                        </form><br><br>
+
+                        <!-- end:Main Form -->
+                    <!-- </div> -->
+                <!-- </div>
+            </div> -->
+    </div>
+    <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar">
+                <footer>
+                    <a class="nav-link" href="#">Copyright©2018</a>
+                    
+                </footer>
+                
+                <footer>
+                	<a class="nav-link" href="#about">About</a>
+                    
+                </footer>
+                
+                <footer>
+                	
+                    <a class="nav-link" href="#contact">Contact</a>
+                </footer>
+            </nav>
+        </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Rent-A-Book</title>
+<!-- Followed  a grid based layout for displaying books and cover pages with a view book button.This button
+helps to view more details related to the book details
+ https://www.w3schools.com/bootstrap/bootstrap_grid_system.asp 
+ Used Angular Directives to perform validations on the form fields
+ https://angular.io/docs
+ -->
+ <link rel="stylesheet" href="css/homepage.css">
+</head>
+<body>
+
+<div class=" ">
+    <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar">
+        <a class="navbar-brand" href="#userhome">Rent A Book</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"  aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="container">
+
+                        <a class="nav-link" href="#userprofile">MyProfile</a>
+           
+            <div>
+                <button class="btn btn-outline-warning my-2 my-sm-0" onclick="location.href = '#logout';" type="submit">Logout</button>
+
+          
+            </div>
+
+        </div>
+    </nav>
+</div>
+
+    <br/>
+    <br/>
+    <div class="container">
+        <div class="row" >
+            <div class="col-md-1">
+            </div>
+
+            <div class="col-md-3">
+                <img class='img-fluid img-responsive' width="200" data-ng-src="cover_pages/{{book.bookId}}.jpg" alt="No image found" src="book.jpg">
+            </div>
+            <div class="col-md-5">
+                <h4>{{book.title}}</h4>
+                <p>By {{book.author}} (Author)</p>
+                <p>Rent : {{book.price}}$ for {{book.period}} months</p>
+                <p><a data-ng-href="#getreview/{{book.uname}}">View Customer Review(s)</a></p>
+                <p>{{book.description}}
+                </p>
+                
+            </div>
+            <div class="col-md-2">
+               <!--  <a href="#payment/{{book.bookId}}"  class="btn btn-primary btn-lg">Rent Book</a> -->
+                 <p>  <a  class="btn btn-primary btn"  data-ng-href = "#payment/{{book.bookId}}" >Rent Book</a></p>
+                 <p><a  class="btn btn-primary btn"  data-ng-href = "#contactselller/{{book.uname}}" >Contact Seller</a></p>
+                 <p>  <a  class="btn btn-primary btn"  data-ng-href = "#postreview/{{book.uname}}" >Post User Review</a></p>
+                 <!-- <button class="btn btn-outline-warning my-2 my-sm-0" type="submit" onclick="location.href = '#postreview';">Add Review</button> -->
+              <!--  <p>  <button type="button" class="btn btn-primary btn-lg" onclick="window.location.href='#payment/{{book.bookId}}'">Rent Book</button></p> -->  
+            </div>
+        </div>
+    </div>
+    <br/>
+
+    <br>
+
+    <!-- <div data-ng-include="'pages/footer.html'"></div> -->
+    
+    <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom" id="navbar">
+                <footer style="color: white; text-align: center">
+                    <a class="nav-link" href="#">Copyright©2018</a>
+                    
+                </footer>
+                
+                <footer style="color: white; text-align: center">
+                	<a class="nav-link" href="#about">About</a>
+                    
+                </footer>
+                
+                <footer style="color: white; text-align: center">
+                	
+                    <a class="nav-link" href="#contact">Contact</a>
+                </footer>
+            </nav>
+        </div>
+        
+
+</div>
+</body>
+</html>
+

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Rent-A-Book</title>
+<!-- Followed  a grid based layout for displaying books and cover pages with a view book button.This button
+helps to view more details related to the book details
+ https://www.w3schools.com/bootstrap/bootstrap_grid_system.asp 
+ Used Angular Directives to perform validations on the form fields
+ https://angular.io/docs
+ -->
+<!--  <link rel="stylesheet" href="css/homepage.css"> -->
+</head>
+<body> 
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar">
+        <a class="navbar-brand" href="#userhome">Rent A Book</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"  aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="container">
+                        <!-- <a class="nav-link" href="#userprofile" style="color:white !important;">MyProfile</a> -->
+			<div class="collapse navbar-collapse justify-content-end" id="navbarSupported">
+
+            <div>
+                <button class="btn btn-outline-warning my-2 my-sm-0" onclick="location.href = '#logout';" type="submit">Logout</button>
+
+			</div>
+            </div>
+
+        </div>
+    </nav>
+</div>
+
+<div class="container">
+
+    <nav class="navbar navbar-dark bg-warning">
+        <p class="record">Your Record</p>
+    </nav><br>
+
+	<div class="custom_navlink">
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" href="#userprofile"">Books Borrowed</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#userprofile2">Books Uploaded</a>
+        </li>
+    </ul>
+    </div>
+</div>
+
+<br><br><br>
+
+
+<div class="container">
+
+ <p class="text-success" >{{response}}</p>
+ <p class="text-danger">{{errormessage}}</p>
+    <div   data-ng-repeat="book in allbooks| filter:search"  class="media" style="border: 2px black" id="custommedia1">
+        <img class="d-flex align-self-center mr-3"  data-ng-src="cover_pages/{{book.bookId}}.jpg" id="imageprvw1" alt="No image" src="book.jpg">
+        <div class="media-body">
+            <h5 class="mt-0">{{book.title}}</h5>
+            <p>{{book.description}}</p>
+            <p class="mb-0" id="author1">Book Author: {{book.author}}</p>
+        </div>
+    </div>
+
+     
+
+</div>
+
+<!-- <div data-ng-include="'pages/footer.html'"></div> -->
+</body>
+</html>

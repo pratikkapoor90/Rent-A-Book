@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Rent-A-Book</title>
+<!-- Followed  a grid based layout for displaying books and cover pages with a view book button.This button
+helps to view more details related to the book details
+ https://www.w3schools.com/bootstrap/bootstrap_grid_system.asp 
+ Used Angular Directives to perform validations on the form fields
+ https://angular.io/docs
+ -->
+ <link rel="stylesheet" href="css/homepage.css">
+</head>
+<body>
+<div  style="background-color: #D7D3CA;">
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar">
+        <a class="navbar-brand" href="#userhome">Rent A Book</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="container">
+                        <a class="nav-link" href="#userprofile">MyProfile</a>
+
+            <div>
+                <button class="btn btn-outline-warning my-2 my-sm-0" onclick="location.href = '#logout';" type="submit">Logout</button>
+
+
+            </div>
+
+        </div>
+    </nav>
+</div>
+<!--site_login-->
+<div  class="container" id="login">
+    <div class="row">
+       
+        <br>
+    </div>
+    <div class="row"> 
+        <div class="col-sm-12">
+            <!-- Main Form -->
+            <div class="login-form-1">
+                <div class="bg-img">
+                    <form name="myForm" id="register-form" class="text-left" >
+                        <div class="customcontainer-upload">
+                            <h1>Book Details</h1><br>
+
+                            <div class="login-group">
+                                <div class="form-group">
+                                    <input
+                                        data-ng-model="form_title" 
+                                        required       
+                                        type="text" 
+                                        class="form-control"   
+                                        placeholder="Book Name"
+                                        pattern="^[A-z ]*$"
+                                        title="Only letters and spaces allowed."
+                                        >
+                                </div>
+
+                                <div class="form-group">
+                                    <input
+                                        data-ng-model="form_authors" 
+                                        required       
+                                        type="text" 
+                                        class="form-control"   
+                                        placeholder="Author"
+                                        pattern="^[A-z ]*$"
+                                        title="Only letters and spaces allowed."
+                                        
+                                        >
+                                </div>
+
+                                <div class="form-group">
+                                    <input
+                                        data-ng-model="form_period" 
+                                        required       
+                                        type="text" 
+                                        class="form-control"   
+                                        placeholder="Duration (days)"
+                                        pattern="^\d*$"
+                                        title="Only numbers allowed."
+                                        >
+                                </div>
+
+                                <div class="form-group">
+                                    <input
+                                        data-ng-model="form_price" 
+                                        required       
+                                        type="text" 
+                                        class="form-control"   
+                                        placeholder="Price"
+                                        pattern="^\d*$"
+                                        title="Only numbers allowed"
+                                        >
+                                </div>
+
+
+                                <div class="form-group">
+                                    <input
+                                       data-ng-model="form_category" 
+                                        required       
+                                        type="text" 
+                                        class="form-control"   
+                                        placeholder="Book Category"
+                                        pattern="^[A-z ]*$"
+                                        title="Only letters and spaces allowed."
+                                        >
+                                </div>
+                                
+                                
+                                <div class="form-group">
+                                    <input
+                                       data-ng-model="form_description" 
+                                        required       
+                                        type="text" 
+                                        class="form-control"   
+                                        placeholder="Book Description"
+                                        pattern="^[A-z ]*$"
+                                        title="Only letters and spaces allowed."
+                                        >
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label  >
+                                        Cover Page
+                                    </label>
+                                    <input  required  type="file" data-ng-model="form_coverpage" data-base-sixty-four-input  accept="image/*">
+                                </div>
+
+                            </div>
+                            <button  data-ng-click="sendAddBookRequest()"  class="btn btn-outline-warning my-2 my-sm-0" style="margin-left: auto;margin-right: auto;display: block">
+                                Submit
+                            </button>
+                            <p class="text-success" >{{response}}</p>
+                             <p class="text-danger">{{errormessage}}</p>
+                        </div>
+                          
+                   
+              
+                    </form>
+                     
+                    <!-- end:Main Form -->
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div data-ng-include="'pages/footer.html'"></div>
+</div>
+</body>
+</html>

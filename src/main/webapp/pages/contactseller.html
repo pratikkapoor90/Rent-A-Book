@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Rent-A-Book</title>
+<!-- Followed  a grid based layout for displaying books and cover pages with a view book button.This button
+helps to view more details related to the book details
+ https://www.w3schools.com/bootstrap/bootstrap_grid_system.asp 
+ Used Angular Directives to perform validations on the form fields
+ https://angular.io/docs
+ -->
+  <link rel="stylesheet" href="css/homepage.css">
+ 
+</head>
+<body> 
+
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar">
+        <a class="navbar-brand" href="#userhome">Rent A Book</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"  aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="container">
+           <div class="collapse navbar-collapse justify-content-end" id="navbarSupported"> 
+            <div>
+                <button class="btn btn-outline-warning my-2 my-sm-0" onclick="location.href = '#logout';" type="submit">Logout</button>
+            </div>
+			</div>>
+        </div>
+    </nav>
+</div>
+
+		<div class="container ">
+			<div class="shadow p-3 mb-5 bg-light rounded text-xl-center font-weight-bold" style="margin-top: 2%;">
+			<h2>Seller Contact Information</h2>
+			</div>
+		</div>
+
+        <div data-ng-repeat="contact in contactdetails" >
+            <div class="container">
+		  <div  class="card-body">
+		  <div class="card" style="margin-top: 1%; padding: 3%">
+		    <h5 class="card-title">Name: {{contact.name}}</h5>
+		    <p class="card-text">Email: <b>{{contact.email}}</b></p>
+		    <p class="card-text">Phone Number: {{contact.phone}}</p>
+		  </div>
+		</div>
+		
+		</div>
+         
+
+
+<div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom" id="navbar">
+                <footer style="color: white; text-align: center">
+                    <a class="nav-link" href="#">Copyright©2018</a>
+                    
+                </footer>
+                
+                <footer style="color: white; text-align: center">
+                	<a class="nav-link" href="#about">About</a>
+                    
+                </footer>
+                
+                <footer style="color: white; text-align: center">
+                	
+                    <a class="nav-link" href="#contact">Contact</a>
+                </footer>
+            </nav>
+        </div>
+
+</body>
+</html>

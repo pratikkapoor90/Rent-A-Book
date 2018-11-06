@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Rent-A-Book</title>
+<!-- Followed  a grid based layout for displaying books and cover pages with a view book button.This button
+helps to view more details related to the book details
+ https://www.w3schools.com/bootstrap/bootstrap_grid_system.asp 
+ Used Angular Directives to perform validations on the form fields
+ https://angular.io/docs
+ -->
+ <link rel="stylesheet" href="css/homepage.css">
+</head>
+<body>
+
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar">
+        <a class="navbar-brand" href="#userhome">Rent A Book</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"  aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+    </nav>
+</div>
+
+<div class="container">
+  
+
+
+  <div  class="card-body">
+  <div class="card" style="margin-top: 2%; padding: 5%">
+    <h3 class="card-title">About Us</h3>
+    <p class="card-text">The project aims at building a book renting application named "Rent-A-Book". Users of the application can upload a book for renting along with its rental price on the website for the public. The users who need a book can register themselves on the website , search for the book based on the title , communicate with the book owner offline, through their email ids and phone number and pay the rental fee through this application. The project aims to target a small user base, for example, students from Dalhousie University. This gives an advantage to users as students living in same or nearby areas and renting the books can connect with each other by meeting them in person.
+This project aims to build an application which is non-existent and majorly aims to target students.</p>
+    <p class="card-text">The goal of the application is to reduce and/or optimize the expenses of students as they do not need to buy books for a shorter duration, they can simply rent them. The other goal which this application serves is the reusability of books. The objective of the project is to bridge the gap between users who need to borrow books for a limited period and the ones who have books available that they can rent out. The goal is to provide a common platform to users (majorly students) to connect with each other and exchange books. Currently the application would focus on a small area or university so that students can get in touch with each other regarding their books offline as well.</p>
+    
+  </div>
+</div>
+</div>
+
+
+<div data-ng-include="'pages/footer.html'"></div>
+</body>
+</html>
